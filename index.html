@@ -3,121 +3,128 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>United Arctic Tavern</title>
+  <title>Frostspire Tavern</title>
 
-  <!-- Google Font: Cinzel -->
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=Roboto&display=swap" rel="stylesheet" />
 
   <style>
     body {
       margin: 0;
-      font-family: 'Cinzel', serif;
-      background-color: #1a1a1a; /* Dark neutral background */
-      color: #f4e8d8;
-      text-align: center;
-      overflow-x: hidden;
+      font-family: 'Roboto', sans-serif;
+      background-color: #121212;
+      color: #e0e0e0;
     }
 
     header {
-      background: rgba(0, 0, 0, 0.7);
-      padding: 50px 20px;
-      text-shadow: 0 0 10px #d9c28f;
-      border-bottom: 4px solid #d9a441;
+      background: linear-gradient(to right, #1c1c1c, #2a2a2a);
+      padding: 40px 20px;
+      text-align: center;
+      border-bottom: 3px solid #4fc3f7;
     }
 
     header h1 {
-      font-size: 4rem;
+      font-family: 'Uncial Antiqua', cursive;
+      font-size: 3.5rem;
+      color: #b3e5fc;
       margin: 0;
-      color: #ffefc2;
-      text-shadow: 0 0 20px #ffd87c, 0 0 40px #d9a441;
+      text-shadow: 0 0 10px #4fc3f7;
     }
 
     header p {
-      font-size: 1.2rem;
       font-style: italic;
+      color: #81d4fa;
+      margin-top: 10px;
     }
 
     section {
-      padding: 60px 20px;
+      padding: 50px 20px;
       max-width: 1000px;
       margin: auto;
     }
 
     h2 {
-      color: #ffd87c;
-      text-shadow: 0 0 5px #000;
+      font-family: 'Uncial Antiqua', cursive;
+      color: #4fc3f7;
       margin-bottom: 20px;
+      text-align: center;
     }
 
-    .characters, .quests {
+    .cards {
       display: flex;
-      justify-content: center;
       flex-wrap: wrap;
       gap: 20px;
+      justify-content: center;
     }
 
-    article.card {
-      background: rgba(0, 0, 0, 0.65);
-      border: 2px solid #d9a441;
-      border-radius: 12px;
-      width: 250px;
+    .card {
+      background: #1e1e1e;
+      border: 2px solid #4fc3f7;
+      border-radius: 10px;
       padding: 20px;
-      box-shadow: 0 0 15px rgba(217, 162, 65, 0.5);
+      width: 220px;
+      box-shadow: 0 0 10px #4fc3f7;
       transition: transform 0.3s ease;
     }
 
-    article.card:hover {
-      transform: translateY(-5px);
+    .card:hover {
+      transform: scale(1.05);
     }
 
-    article.card h3 {
+    .card h3 {
+      color: #b3e5fc;
       margin-top: 0;
-      color: #ffe8a1;
     }
 
-    .quest-board {
-      background: rgba(0, 0, 0, 0.7);
-      padding: 40px;
-      border-radius: 15px;
-      box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.7);
+    .card p {
+      font-size: 0.95rem;
+      color: #cfd8dc;
     }
 
-    article.quest {
-      background: rgba(255, 255, 200, 0.9);
-      color: #3b2d1f;
+    .quests {
+      background: #1c1c1c;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: inset 0 0 15px #4fc3f7;
+    }
+
+    .quest {
+      background: #263238;
+      color: #e0f7fa;
       padding: 15px;
-      margin: 10px;
-      border-radius: 8px;
-      font-family: 'Georgia', serif;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      margin: 10px 0;
+      border-left: 5px solid #4fc3f7;
+      border-radius: 6px;
     }
 
     button {
-      padding: 12px 25px;
-      border: none;
-      border-radius: 25px;
-      background: #d9a441;
+      background: #4fc3f7;
       color: #000;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 25px;
       font-weight: bold;
       cursor: pointer;
       transition: 0.3s;
+      margin-top: 20px;
     }
 
     button:hover {
-      background: #ffe8a1;
+      background: #b3e5fc;
       transform: scale(1.1);
     }
 
     footer {
+      background: #1c1c1c;
+      color: #81d4fa;
+      text-align: center;
       padding: 20px;
       font-size: 0.9rem;
-      background: rgba(0, 0, 0, 0.8);
-      border-top: 2px solid #d9a441;
-      color: #ffd87c;
+      border-top: 2px solid #4fc3f7;
     }
 
     @media (max-width: 600px) {
-      article.card {
+      .card {
         width: 100%;
       }
 
@@ -130,54 +137,50 @@
 <body>
 
   <header>
-    <h1>United Arctic Tavern</h1>
-    <p>Grab a frosty mug and share tales of magic, mystery, and unity</p>
+    <h1>Frostspire Tavern</h1>
+    <p>Where legends thaw and stories ignite</p>
   </header>
 
   <section>
-    <h2>Story Corner</h2>
-    <p>In this tavern, two worlds collide — the shadowed <strong>Realm of Darkness</strong> and the radiant <strong>Kingdom of Lumina</strong>. Here, adventurers, mystics, and heroes gather to tell their stories under the glow of lanterns and northern lights.</p>
+    <h2>Welcome Scroll</h2>
+    <p>In the heart of the frozen north, the Frostspire Tavern stands as a beacon for wandering souls. Here, tales of shadow and light echo through the icy halls, and every mug of frostbrew carries a whisper of ancient magic.</p>
   </section>
 
   <section>
-    <h2>Character Tables</h2>
-    <div class="characters">
-      <article class="card">
-        <h3>Pumpkin Knight</h3>
-        <p>A cursed warrior of flame and frost, protector of both realms.</p>
-      </article>
-      <article class="card">
-        <h3>Mr. Wizard</h3>
-        <p>An eccentric mage whose tower touches the stars, keeper of ancient lore.</p>
-      </article>
-      <article class="card">
-        <h3>Shadow Sentinel</h3>
-        <p>Mysterious guardian of the Enchanted Forest, master of stealth.</p>
-      </article>
-      <article class="card">
-        <h3>Blossom Healer</h3>
-        <p>Gentle caretaker of the magical gardens, blessed with healing powers.</p>
-      </article>
+    <h2>Adventurers</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Glacier Warden</h3>
+        <p>Guardian of the icy cliffs, sworn to protect the balance of frost and flame.</p>
+      </div>
+      <div class="card">
+        <h3>Starcaller</h3>
+        <p>A mystic who communes with constellations, weaving fate through celestial threads.</p>
+      </div>
+      <div class="card">
+        <h3>Echoblade</h3>
+        <p>Silent rogue of the tundra, her blade sings only when justice demands it.</p>
+      </div>
     </div>
   </section>
 
   <section>
-    <h2>Quest Board</h2>
-    <div class="quest-board">
-      <article class="quest"><strong>Protect the Realm:</strong> Defend against shadowy forces seeking to engulf the Arctic.</article>
-      <article class="quest"><strong>Balance the Worlds:</strong> Keep harmony between the Shadow Realm and Lumina.</article>
-      <article class="quest"><strong>Artifact Hunt:</strong> Recover ancient magical relics scattered across icy lands.</article>
+    <h2>Quest Crystals</h2>
+    <div class="quests">
+      <div class="quest"><strong>Crystal of Unity:</strong> Restore harmony between rival clans before the solstice storm.</div>
+      <div class="quest"><strong>Frozen Relic:</strong> Unearth the lost artifact buried beneath the Whispering Glacier.</div>
+      <div class="quest"><strong>Lantern of Truth:</strong> Illuminate the secrets hidden in the Hollow Woods.</div>
     </div>
   </section>
 
   <section>
-    <h2>Join the Tavern</h2>
-    <p>Pull up a chair, raise your mug, and share your story with fellow adventurers.</p>
-    <button onclick="alert('Welcome, adventurer! Your tale begins...')">Enter the Realm</button>
+    <h2>Join the Circle</h2>
+    <p>Ready your tale, brave soul. The hearth awaits your legend.</p>
+    <button onclick="alert('Welcome to Frostspire! Your legend begins now.')">Enter Tavern</button>
   </section>
 
   <footer>
-    <p>© 2025 United Arctic Tavern. May your path be ever frosty and bright.</p>
+    <p>© 2025 Frostspire Tavern. May your story echo through the frost forever.</p>
   </footer>
 
 </body>
