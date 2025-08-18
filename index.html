@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Frostspire Tavern</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=Roboto&display=swap" rel="stylesheet" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #121212;
+      color: #e0e0e0;
+    }
+
+    header {
+      background: linear-gradient(to right, #1c1c1c, #2a2a2a);
+      padding: 40px 20px;
+      text-align: center;
+      border-bottom: 3px solid #4fc3f7;
+    }
+
+    header h1 {
+      font-family: 'Uncial Antiqua', cursive;
+      font-size: 3.5rem;
+      color: #b3e5fc;
+      margin: 0;
+      text-shadow: 0 0 10px #4fc3f7;
+    }
+
+    header p {
+      font-style: italic;
+      color: #81d4fa;
+      margin-top: 10px;
+    }
+
+    section {
+      padding: 50px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      font-family: 'Uncial Antiqua', cursive;
+      color: #4fc3f7;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .card {
+      background: #1e1e1e;
+      border: 2px solid #4fc3f7;
+      border-radius: 10px;
+      padding: 20px;
+      width: 220px;
+      box-shadow: 0 0 10px #4fc3f7;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card h3 {
+      color: #b3e5fc;
+      margin-top: 0;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: #cfd8dc;
+    }
+
+    .quests {
+      background: #1c1c1c;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: inset 0 0 15px #4fc3f7;
+    }
+
+    .quest {
+      background: #263238;
+      color: #e0f7fa;
+      padding: 15px;
+      margin: 10px 0;
+      border-left: 5px solid #4fc3f7;
+      border-radius: 6px;
+    }
+
+    button {
+      background: #4fc3f7;
+      color: #000;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 25px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+      margin-top: 20px;
+    }
+
+    button:hover {
+      background: #b3e5fc;
+      transform: scale(1.1);
+    }
+
+    footer {
+      background: #1c1c1c;
+      color: #81d4fa;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      border-top: 2px solid #4fc3f7;
+    }
+
+    @media (max-width: 600px) {
+      .card {
+        width: 100%;
+      }
+
+      header h1 {
+        font-size: 2.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Frostspire Tavern</h1>
+    <p>Where legends thaw and stories ignite</p>
+  </header>
+
+  <section>
+    <h2>Welcome Scroll</h2>
+    <p>In the heart of the frozen north, the Frostspire Tavern stands as a beacon for wandering souls. Here, tales of shadow and light echo through the icy halls, and every mug of frostbrew carries a whisper of ancient magic.</p>
+  </section>
+
+  <section>
+    <h2>Adventurers</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Glacier Warden</h3>
+        <p>Guardian of the icy cliffs, sworn to protect the balance of frost and flame.</p>
+      </div>
+      <div class="card">
+        <h3>Starcaller</h3>
+        <p>A mystic who communes with constellations, weaving fate through celestial threads.</p>
+      </div>
+      <div class="card">
+        <h3>Echoblade</h3>
+        <p>Silent rogue of the tundra, her blade sings only when justice demands it.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Quest Crystals</h2>
+    <div class="quests">
+      <div class="quest"><strong>Crystal of Unity:</strong> Restore harmony between rival clans before the solstice storm.</div>
+      <div class="quest"><strong>Frozen Relic:</strong> Unearth the lost artifact buried beneath the Whispering Glacier.</div>
+      <div class="quest"><strong>Lantern of Truth:</strong> Illuminate the secrets hidden in the Hollow Woods.</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Join the Circle</h2>
+    <p>Ready your tale, brave soul. The hearth awaits your legend.</p>
+    <button onclick="alert('Welcome to Frostspire! Your legend begins now.')">Enter Tavern</button>
+  </section>
+
+  <footer>
+    <p>© 2025 Frostspire Tavern. May your story echo through the frost forever.</p>
+  </footer>
+
+</body>
+</html>
